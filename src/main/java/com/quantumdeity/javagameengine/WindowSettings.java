@@ -4,7 +4,15 @@ public class WindowSettings {
     private int width;
     private int height;
 
-    static class Builder{
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public static class Builder{
         WindowSettings windowSettings = new WindowSettings();
 
         public WindowSettings build(){
@@ -16,8 +24,8 @@ public class WindowSettings {
             return this;
         }
 
-        public Builder setHeight(int width){
-            windowSettings.width = width;
+        public Builder setHeight(int height){
+            windowSettings.height = height;
             return this;
         }
     }
